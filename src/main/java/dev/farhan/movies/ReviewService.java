@@ -21,6 +21,7 @@ public class ReviewService {
                 .matching(Criteria.where("imdbId").is(imdbId))
                 .apply(new Update().push("reviewIds").value(review))
                 .first();
+
         return review;
     }
 }
